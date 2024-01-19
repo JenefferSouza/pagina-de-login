@@ -1,39 +1,88 @@
 * {
-    margin: 0%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#container {
+body {
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
-.logo {
-    width: 65%;
-    background-color: #abcb96;
+.container .containerEsquerdo {
+    width: 100vw;
+    height: 100vh;
+    background: #abcb96;
 }
 
-.formulario {
+.container .containerDireito {
+    position: absolute;
+    height: 90vh;
+    width: 90vw;
+    background: #FFF;
     display: flex;
     flex-direction: column;
-    width: 35%;
-    padding: 60px;
-  
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #abcb96;
-    font-size: 48px;
+.container .containerDireito h1 {
+    margin-bottom: 2rem;
 }
 
-input {
-    margin-bottom: 10px;
-    border-radius: 5px;
+.container .containerDireito form label input {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 5px;
+    padding: .75rem;
+    outline: 0;
+    border: 1px solid #CCC;
+    border-radius: 6px;
 }
 
-button {
-    background-color: #abcb96;
-    border-radius: 5px;
+.container .containerDireito form p {
+    text-align: right;
+    margin: 1rem 0;
+    font-size: 14px;
+}
+
+.container .containerDireito form p a {
+    color: #4e81c9;
+}
+
+.container .containerDireito form button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: .75rem;
+    background: #abcb96;
+    border-radius: 6px;
+    border: 0;
+    color: #FFF;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.container .containerDireito form button:hover {
+    background: #9bb888;
+}
+
+@media (min-width: 768px) {
+    .container .containerDireito {
+        position: static;
+        width: 60vw;
+    }
 }
